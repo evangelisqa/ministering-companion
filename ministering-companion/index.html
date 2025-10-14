@@ -1,13 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ministering-companion</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ministering Companion</title>
+  <link rel="stylesheet" href="./src/App.css" />
+  <script defer src="firebase-config.js"></script>
+  <script defer src="app.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lato&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <h1>Ministering Companionship App</h1>
+    <button id="signInBtn">Sign In</button>
+  </header>
+
+  <main>
+    <section id="dashboard">
+      <h2>Assignment Dashboard</h2>
+      <div id="assignments"></div>
+    </section>
+
+    <section id="visitLog">
+      <h2>Visit Logging</h2>
+      <form id="visitForm">
+        <input type="text" placeholder="Household Name" required />
+        <textarea placeholder="Impressions & Notes"></textarea>
+        <button type="submit">Log Visit</button>
+      </form>
+    </section>
+
+    <section id="messageLibrary">
+      <h2>Message Library</h2>
+      <div id="messages"></div>
+    </section>
+
+    <section id="reporting">
+      <h2>Progress Reporting</h2>
+      <button id="generateReport">Generate Monthly Report</button>
+    </section>
+  </main>
+</body>
+
 </html>
